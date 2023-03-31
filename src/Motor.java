@@ -1,8 +1,8 @@
 public class Motor {
 
-    String serie;
-    double cilindraje;
-    String tipoCombustible;
+    private String serie;
+    private double cilindraje;
+    private String tipoCombustible;
 
     public Motor(){
 
@@ -14,6 +14,9 @@ public class Motor {
         this.tipoCombustible = tipoCombustible;
     }
 
+    public Motor(String serie) {
+        this.serie = serie;
+    }
 
     double torque(){
         double torqueNm=0;
@@ -25,5 +28,27 @@ public class Motor {
         return torqueNm;
     }
 
+    public String getSerie() {
+        return serie;
+    }
 
+    public void setSerie(String serie) {
+        this.serie = serie;
+    }
+
+    public double getCilindraje() {
+        return cilindraje;
+    }
+
+    public void setCilindraje(double cilindraje) {
+        this.cilindraje = cilindraje;
+    }
+
+    public String getTipoCombustible() {
+        return tipoCombustible;
+    }
+
+    public void setTipoCombustible(String tipoCombustible) {
+        this.tipoCombustible = tipoCombustible;
+    }
 }

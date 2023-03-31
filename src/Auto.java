@@ -1,15 +1,15 @@
 public class Auto {
 
-    String placa;
-    String modelo;
-    int anio;
-    String marca;
+    public String placa;
+    public String modelo;
+    private int anio;
+    private String marca;
 
-    Motor motor;
+    private Motor motor;
 
-    Duenio duenio;
+    private Duenio duenio;
 
-    int numRuedas;
+    private int numRuedas;
 
 
     public Auto(){
@@ -25,6 +25,10 @@ public class Auto {
         this.numRuedas=numRuedas;
     }
 
+    public Auto(Motor motor, Duenio duenio) {
+        this.motor = motor;
+        this.duenio = duenio;
+    }
 
     double velocidad(int a){
         double velocidadKmh=0;
@@ -42,5 +46,74 @@ public class Auto {
         return velocidadKmh;
     }
 
+    public String getPlaca() {
+        return placa;
+    }
 
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getAnio() {
+        return anio;
+    }
+
+    public void setAnio(int anio) {
+        this.anio = anio;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public Motor getMotor() {
+        return motor;
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
+
+    public Duenio getDuenio() {
+        return duenio;
+    }
+
+    public void setDuenio(Duenio duenio) {
+        this.duenio = duenio;
+    }
+
+    public int getNumRuedas() {
+        return numRuedas;
+    }
+
+    public void setNumRuedas(int numRuedas) {
+        this.numRuedas = numRuedas;
+    }
+
+
+    public void imprimirAttr(){
+
+        System.out.println("La placa del auto es: "+placa);
+        System.out.println("El modelo del auto es:" + modelo);
+        System.out.println("El año del auto es: "+anio);
+        System.out.println("La marca del auto es: "+marca);
+        System.out.println("El la serie del motor es: "+motor.getSerie());
+        System.out.println("El combustible del motor es: "+motor.getTipoCombustible());
+        System.out.println("El cilindraje del motor es: "+motor.getCilindraje());
+        System.out.println("El nombre del dueño es: "+duenio.getNombre());
+        System.out.println("La cédula del dueño es: "+duenio.getCedula());
+        System.out.println("El numero de llantas del auto es: "+numRuedas);
+    }
 }
