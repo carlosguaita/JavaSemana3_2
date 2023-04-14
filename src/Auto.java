@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Auto {
 
     public String placa;
@@ -115,5 +117,38 @@ public class Auto {
         System.out.println("El nombre del dueño es: "+duenio.getNombre());
         System.out.println("La cédula del dueño es: "+duenio.getCedula());
         System.out.println("El numero de llantas del auto es: "+numRuedas);
+    }
+
+    public void ingresarAttr(String nombreAuto){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese la placa del "+nombreAuto+": ");
+        String placa = sc.next();
+        System.out.println("Ingrese la modelo del "+nombreAuto+": ");
+        String modelo = sc.next();
+        System.out.println("Ingrese la marca del "+nombreAuto+": ");
+        String marca = sc.next();
+        System.out.println("Ingrese la año del "+nombreAuto+": ");
+        int anio = sc.nextInt();
+        System.out.println("Ingrese el cilindraje del "+nombreAuto+": ");
+        double cilindraje = sc.nextDouble();
+        System.out.println("Ingrese la serie del motor del "+nombreAuto+": ");
+        String serie = sc.next();
+        System.out.println("Ingrese el tipo de combustible del "+nombreAuto+": ");
+        String tipoCombustible = sc.next();
+        System.out.println("Ingrese el nombre del dueño del "+nombreAuto+": ");
+        String nombreDuenio = sc.next();
+        System.out.println("Ingrese la cedula del dueño del "+nombreAuto+": ");
+        String cedulaDuenio = sc.next();
+        System.out.println("Ingrese el numero de ruedas del "+nombreAuto+": ");
+        int numRuedas = sc.nextInt();
+
+        this.placa=placa;
+        this.marca=marca;
+        this.modelo=modelo;
+        this.anio=anio;
+        this.motor=new Motor(serie,cilindraje,tipoCombustible);
+        this.duenio=new Duenio(nombreDuenio,cedulaDuenio);
+        this.numRuedas=numRuedas;
     }
 }
